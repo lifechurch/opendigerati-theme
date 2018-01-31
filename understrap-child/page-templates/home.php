@@ -53,7 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="entry-content">
 
-				<?php the_content(); ?>
+				<?php //the_content(); ?>
 
 				<?php
 				wp_link_pages( array(
@@ -89,7 +89,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		endif;
 		?>
-
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="od-home-project-header">Latest Posts</h2>
+					<?php echo do_shortcode('[display_medium_posts handle="open-digerati" publication=true default_image="#" display=3 offset=0 total=3 list=true]'); ?>
+				</div>
+			</div>
+		</div>
 	<?php endwhile; // end of the loop. ?>
 
 <?php get_footer(); ?>
