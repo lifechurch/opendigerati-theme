@@ -4139,6 +4139,11 @@ tbody.collapse.show {
   .card-deck .card {
     margin-bottom: 15px; }
   @media (min-width: 576px) {
+    .card-deck .card {
+      margin-bottom: 30px; }
+  }
+
+  @media (min-width: 992px) {
     .card-deck {
       flex-flow: row wrap;
       margin-right: -15px;
@@ -9624,6 +9629,9 @@ a.skip-link {
 
 /*homepage style*/
 
+.od-homepage-header {
+  margin-bottom: 48px;
+}
 @media only screen and (max-width: 992px) {
   .od-homepage-header {
     margin-top: 82px;
@@ -9635,6 +9643,12 @@ a.skip-link {
     margin-top: 140px;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .od-homepage-header {
+    margin-bottom: 111px;
+  }
+}
+
 
 .display-medium-title {
   font-family: proxima_novabold;
@@ -9658,10 +9672,30 @@ a.skip-link {
 .center-columns {
   margin: auto;
 }
+.center-columns-horz {
+  margin: 0 auto;
+}
 
+@media (min-width: 992px) {
+  .od-homepage-header .hs-form {
+    position: relative;
+  }
 
+  .od-homepage-header .hs-form .hs-input {
+    height: 58px !important;
+  }
+  .od-homepage-header .hs-form .hs_submit{
+    margin-top: 0 !important;
+  }
+  .od-homepage-header .hs-form .hs_submit .hs-button{
+    position: absolute;
+    top: 28px;
+    right: 10px;
+    height: 52px;
+  }
+}
 .hs-form-required {
-  display: none;
+  display: none !important;
 }
 
 .hs-input{
@@ -9675,8 +9709,14 @@ a.skip-link {
   padding-left: 25px!important;
 }
 
+
 .hs_submit {
-  margin-top:5px!important;
+  margin-top: 10px !important;
+}
+@media (min-width: 992px) {
+  .hs_submit {
+    margin-top: 5px !important;
+  }
 }
 
 .hs-button {
@@ -9692,4 +9732,346 @@ a.skip-link {
   color: #000!important;
   font-family: 'proxima_novasemibold'!important;
   font-size: 19px!important;
+}
+
+.od-card-footer {
+  background: #fff;
+  border: none;
+}
+
+.od-card-footer a {
+  font-size: 18px;
+  color: black;
+  text-decoration: underline;
+}
+@media (min-width: 992px) {
+  .od-card-footer a {
+    font-size: 20px;
+  }
+}
+
+.od-view-all-button {
+  margin: 45px 0px 80px 0px;
+  width: 220px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  border: 0;
+  font-family: proxima_novaregular;
+  font-size: 19px;
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .od-view-all-button {
+    margin: 24px 0px 24px 0px;
+    font-size: 21px;
+    width: 268px;
+    height: 60px;
+  }
+}
+
+.od-home-project-header {
+  margin-bottom: 16px;
+  font-size: 30px;
+  font-family: proxima_novablack;
+}
+@media (min-width: 992px) {
+  .od-home-project-header {
+    font-size: 33px;
+  }
+}
+
+
+.od-more-projects {
+  background: #000;
+  margin-top: 60px;
+}
+
+.od-card-deck {
+  margin-top:-60px;
+}
+
+.od-project-card {
+  border-radius: 0px;
+  border: none;
+}
+.od-project-card > span {
+  height: 60px;
+}
+
+@media (min-width: 992px) {
+  .od-more-projects {
+    margin-top: 88px;
+  }
+
+  .od-card-deck {
+    margin-top:-88px;
+  }
+  .od-project-card > span {
+    height: 88px;
+  }
+}
+
+
+
+.od-project-card-title {
+  font-family: proxima_novabold;
+  font-size: 24px;
+  color: #000;
+}
+
+
+@media (min-width: 992px) {
+  .tags > a {
+    font-size: 17px;
+  }
+}
+
+
+
+/* Project List */
+.post-type-archive-projects #archive-wrapper {
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .post-type-archive-projects #archive-wrapper {
+    margin-bottom: 81px;
+  }
+}
+.post-type-archive-projects .page-header {
+  margin-top: 59px;
+  margin-bottom: 50px;
+}
+.post-type-archive-projects .page-header h1 {
+  font-size: 40px !important;
+}
+@media (min-width: 992px) {
+  .post-type-archive-projects .page-header h1 {
+    font-size: 44px !important;
+  }
+}
+.post-type-archive-projects .entry-header h2,
+.post-type-archive-projects .entry-header a {
+  font-size: 22px !important;
+  font-family: 'proxima_novabold';
+  color: black;
+}
+
+@media (min-width: 992px) {
+  .post-type-archive-projects .entry-header a {
+    font-size: 24px !important;
+  }
+}
+.post-type-archive-projects article.project {
+  clear: left;
+  border-left-width: 40px;
+  border-left-style: solid;
+  padding-left: 20px; 
+}
+@media (max-width: 575px) {
+  .post-type-archive-projects article.project {
+    margin-left: -15px;
+  }
+}
+@media (min-width: 992px) {
+  .post-type-archive-projects article.project {
+    border-left-width: 70px;
+    padding-left: 30px;
+  }
+}
+
+
+.post-type-archive-projects article.project:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media (min-width: 992px) {
+  .post-type-archive-projects article.project:not(:last-child) {
+    margin-bottom: 55px;
+  }
+}
+.post-type-archive-projects article.project .entry-content,
+.post-type-archive-projects article.project .entry-footer {
+  font-size: 18px;
+}
+@media (min-width: 992px) {
+  .post-type-archive-projects article.project .entry-content,
+  .post-type-archive-projects article.project .entry-footer {
+    font-size: 20px;
+  }
+}
+.post-type-archive-projects article.project .entry-footer {
+  margin-top: 10px;
+}
+.post-type-archive-projects article.project .entry-footer a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Single projects */
+
+.single-projects .entry-header {
+  
+}
+.single-projects .entry-header h1.entry-title {
+  font-size: 40px !important;
+  line-height: 1.0 !important;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .single-projects .entry-header h1.entry-title {
+    font-size: 44px !important;
+    line-height: 1.09 !important;
+  }
+}
+.single-projects .od-project-color-block {
+  height: 180px;
+}
+@media (min-width: 992px) {
+  .single-projects .od-project-color-block {
+    height: 275px;
+  }
+}
+.single-projects .od-project-color-block + .wrapper{
+  margin-top:-50px;
+}
+@media (min-width: 992px) {
+  .single-projects .od-project-color-block + .wrapper{
+    margin-top:-6px;
+  }
+}
+@media (min-width: 992px) {
+  .single-projects .od-project-page-header {
+    margin-top:-50px;
+  }
+}
+
+.single-projects .od-project-info-box{
+  margin-top: 50px;
+  background: #fff;
+  font-size: 16px;
+  padding-left: 39px;
+  padding-right: 30px;
+  position: relative;
+}
+.single-projects .od-project-info-box .fa-github {
+  width: 30px;
+  height: 30px;
+  font: normal normal normal 30px/1 FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (min-width: 992px) {
+  .single-projects .od-project-info-box .fa-github {
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    top: 30px;
+    font: normal normal normal 50px/1 FontAwesome;
+  }
+}
+@media (min-width: 992px) {
+  .single-projects .od-project-info-box {
+    margin-top: -4rem !important;
+    padding-left: 95px;
+    padding-right: 30px;
+    padding-top: 39px;
+    font-size: 20px;
+  }
+}
+.single-projects .od-project-info-box .github-row {
+  display: block;
+}
+.single-projects .od-project-info-box .github-row a {
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.single-projects .od-project-slack {
+  margin-top: 16px;
+  margin-left: -39px;
+}
+.single-projects .od-project-slack img {
+  margin-right: 11px;
+}
+@media (min-width: 992px) {
+  .single-projects .od-project-slack {
+    margin-top: 33px;
+    margin-left: -65px;
+  }
+  .single-projects .od-project-slack img {
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+  }
+}
+.tags > a {
+  font-size: 15px;
+  font-family: proxima_novasemibold;
+  color: #777;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.single-projects .tags {
+  margin-bottom: 12px;
+}
+@media (min-width: 992px) {
+  .single-projects .tags {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  .single-projects .content-area,
+  .single-projects .secondary-area {
+    margin: 0 auto;
+  }
+}
+
+.single-projects .od-more-projects-header-container {
+  padding-bottom: 20px;
+}
+/*.single-projects .od-more-projects-header-container {
+  margin-left: -15px;
+}
+@media (min-width: 1200px) {
+  .single-projects .od-more-projects-header-container .od-more-projects-header {
+    margin: auto;
+  }
+}*/
+
+#wrapper-footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 18px;
+}
+#wrapper-footer a {
+  color: white;
+  text-decoration: underline;
+}
+@media (min-width: 992px) {
+  #wrapper-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 20px;
+  }
 }

@@ -74,7 +74,7 @@
 ?>
 
 <!-- END OF GRAB GITHUB INFO -->
-<section style="height: 20vw;min-height: 200px;background-image: linear-gradient(to left, <?php the_field('gradient_color_1'); ?>, <?php the_field('gradient_color_2'); ?>);">
+<section class="od-project-color-block" style="background-image: linear-gradient(to left, <?php the_field('gradient_color_1'); ?>, <?php the_field('gradient_color_2'); ?>);">
 <?php get_header(); $container = get_theme_mod( 'understrap_container_type' );?>
 </section>
 <div class="wrapper" id="full-width-page-wrapper">
@@ -83,7 +83,7 @@
 
 		<div class="row">
 
-			<div class="col-xs-12 col-lg-8 content-area" id="primary">
+			<div class="col-12 col-md-8 col-lg-6 offset-lg-1 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
@@ -91,12 +91,12 @@
 
 						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-							<header class="entry-header">
+							<header class="entry-header od-project-page-header">
 
 								<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 							</header><!-- .entry-header -->
-							<?php $tags = get_tags(); ?>
+							<?php $tags = wp_get_post_tags(get_the_ID()); ?>
 								<div class="tags">
 								<?php foreach ( $tags as $tag ) { ?>
 								    <a href="<?php echo get_tag_link( $tag->term_id ); ?> " rel="tag"><?php echo $tag->name; ?></a>
@@ -140,29 +140,45 @@
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
-			<div class="col-xs-12 col-lg-4">
-		<div class="od-project-info-box">
+			<div class="col-12 col-md-8 col-lg-5 col-xl-4 secondary-area">
+				<div class="od-project-info-box">
 
-	        <i class="fa fa-github" aria-hidden="true"></i>
-	        <a href="<?php the_field('github_url'); ?>" target="_blank"><?php the_field('github_url'); ?></a> <br>
-	        <strong><?= $github_repo_array->forks_count ?></strong> Forks
-	        <strong><?= $github_repo_array->stargazers_count ?></strong> Stars
-	        <strong><?= count($github_contributors_array) ?></strong> Contributors
-	        Last update <strong><?= date('M d, Y ',strtotime($github_repo_array->updated_at)) ?></strong>
+			        <i class="fa fa-github" aria-hidden="true"></i>
+			        <div class="github-row">
+			        	<a href="<?php the_field('github_url'); ?>" target="_blank"><?php the_field('github_url'); ?></a>
+			        </div>
+			        <div class="github-row">
+				        <strong><?= $github_repo_array->forks_count ?></strong> Forks
+				        <strong><?= $github_repo_array->stargazers_count ?></strong> Stars
+				        <strong><?= count($github_contributors_array) ?></strong> Contributors
+				    </div>
+				    <div class="github-row">
+			        	Last update <strong><?= date('M d, Y ',strtotime($github_repo_array->updated_at)) ?></strong>
+			        </div>
 
 
-	        <div class="od-project-slack">
-	        <img width="24px" src="<?php echo( get_stylesheet_directory_uri() . '/img/slack.svg'); ?>" alt="slack logo">
-	        <a href="<?php the_field('slack_url'); ?>" target="_blank"><?php the_field('slack_channel'); ?></a>
-	        </div>
-	    </div>
+			        <div class="od-project-slack">
+				        <img width="24px" src="<?php echo( get_stylesheet_directory_uri() . '/img/slack.svg'); ?>" alt="slack logo">
+				        <a href="<?php the_field('slack_url'); ?>" target="_blank"><?php the_field('slack_channel'); ?></a>
+			        </div>
+			    </div>
+			</div>
 		</div>
-		</div>
-		<?php include(get_theme_root().'/understrap-child/include-projects.php');?>
 				<!-- .row end -->		
 		
 	</div><!-- Container end -->
 
+
 </div><!-- Wrapper end -->
+	<div class="container-fluid od-more-projects-header-container">
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-10 center-columns">
+				<h2 class="od-home-project-header od-more-projects-header">More Projects</h2>
+			</div>
+		</div>
+	</div>
+
+<?php include(get_theme_root().'/understrap-child/include-projects.php');?>
+
 
 <?php get_footer(); ?>

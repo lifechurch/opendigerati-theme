@@ -23,27 +23,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<!-- Do the left sidebar check -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
-			<main class="site-main" id="main">
+			<main class="site-main col-12 col-lg-8 center-columns" id="main">
 
 				<?php if ( have_posts() ) : ?>
-				<style>
-					article.project {
-						clear: left;
-					}
-					article.project:not(:last-child),
-					article.project:not(:last-child):before {
-						margin-bottom: 40px;
-					}
-					article.project:before {
-						content: "";
-						height: 20vw;
-						min-height: 200px;
-						display: block;
-					    float: left;
-					    width: 40px;
-						margin-right: 20px;
-					}
-				</style>
 					<header class="page-header">
 						<h1>Projects</h1>
 					</header><!-- .page-header -->
@@ -52,8 +34,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<style>
-							#post-<?php the_ID(); ?>:before {
-								background-image: linear-gradient(to bottom, <?php the_field('gradient_color_1'); ?>, <?php the_field('gradient_color_2'); ?>);
+							#post-<?php the_ID(); ?> {
+								border-image: linear-gradient(to bottom, <?php the_field('gradient_color_1'); ?>, <?php the_field('gradient_color_2'); ?>) 1 100%;
 							}
 						</style>
 						<article <?php post_class('project'); ?> id="post-<?php the_ID(); ?>">
@@ -78,14 +60,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<div class="entry-content">
 
 							<?php the_field('project_teaser'); ?>
-							<a href="<?php the_permalink(); ?>">More Info</a>
 
 						
 
 						</div><!-- .entry-content -->
 
 						<footer class="entry-footer">
-
+							<a href="<?php the_permalink(); ?>">More Info</a>
 							<?php understrap_entry_footer(); ?>
 
 						</footer><!-- .entry-footer -->
