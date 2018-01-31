@@ -8,7 +8,7 @@ Our current implementation is pure CSS, though we may utilize SCSS and gulp comp
 This theme is dependent on the following plugins:
 - ACF - https://www.advancedcustomfields.com/
 - Custom Post Type UI - https://github.com/WebDevStudios/custom-post-type-ui/
+- Our forked version of "Display Medium Posts" (included in this repo) - we replaced some of the formatting to output bootstrap cards vs the owl carousel formatting.
 
 This theme includes some custom functions:
 - The ability to grab Github info based on the repo url (in the single project template)
-- The abililty to display medium posts via the medium API
