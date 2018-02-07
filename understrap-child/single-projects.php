@@ -20,7 +20,7 @@
 
       // set url 
 
-      $ch = curl_init( "https://api.github.com/repos/$repository?access_token=d69c06a01b44169f861ffe2471d0fe6a4ea4c7be" );
+      $ch = curl_init( "https://api.github.com/repos/$repository?client_id=ad070b20d82f7843dd3b&client_secret=3d4a8e61c3f70b09124fcc563855a0701733fec7" );
       curl_setopt( $ch, CURLOPT_USERAGENT, $userAgent );
 
       //return the transfer as a string 
@@ -51,7 +51,7 @@
 
       // set url 
 
-      $ch = curl_init( "https://api.github.com/repos/$repository/contributors?access_token=d69c06a01b44169f861ffe2471d0fe6a4ea4c7be" );
+      $ch = curl_init( "https://api.github.com/repos/$repository/contributors?client_id=ad070b20d82f7843dd3b&client_secret=3d4a8e61c3f70b09124fcc563855a0701733fec7" );
       curl_setopt( $ch, CURLOPT_USERAGENT, $userAgent );
 
       //return the transfer as a string 
@@ -79,11 +79,11 @@
 </section>
 <div class="wrapper" id="full-width-page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
+	<div class="container" id="content">
 
 		<div class="row">
 
-			<div class="col-12 col-md-8 col-lg-6 offset-lg-1 content-area" id="primary">
+			<div class="col-12 col-md-8 col-lg-6 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
 
@@ -140,7 +140,7 @@
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
-			<div class="col-12 col-md-8 col-lg-5 col-xl-4 secondary-area">
+			<div class="col-12 col-md-8 col-lg-6 col-xl-6 secondary-area">
 				<div class="od-project-info-box">
 
 			        <i class="fa fa-github" aria-hidden="true"></i>
@@ -158,8 +158,12 @@
 
 
 			        <div class="od-project-slack">
-				        <img width="24px" src="<?php echo( get_stylesheet_directory_uri() . '/img/slack.svg'); ?>" alt="slack logo">
-				        <a href="<?php the_field('slack_url'); ?>" target="_blank"><?php the_field('slack_channel'); ?></a>
+				        <a class="od-slack-workspace-invite" href="https://join.slack.com/t/opendigerati/shared_invite/enQtMjU4MTcwOTIxMzMwLTcyYjQ4NWEwMzBlOGIzNDgyM2U5NzExYTY3NmI0MDE4MTRmMTQ5NjNhZWEyNDY3N2IyOWZjMDIxM2MwYjEwMmQ" target="_blank">
+                  <img width="24px" src="<?php echo( get_stylesheet_directory_uri() . '/img/slack.svg'); ?>" alt="slack logo">Join the Open Digerati workspace
+                </a>
+                <br/>
+                <div></div>
+                <a class="od-slack-project-invite" href="<?php echo(the_field('slack_url')); ?>" target="_blank">#<?php the_field('slack_channel'); ?></a>
 			        </div>
 			    </div>
 			</div>
@@ -170,15 +174,18 @@
 
 
 </div><!-- Wrapper end -->
-	<div class="container-fluid od-more-projects-header-container">
-		<div class="row">
-			<div class="col-12 col-md-8 col-lg-10 center-columns">
-				<h2 class="od-home-project-header od-more-projects-header">More Projects</h2>
-			</div>
-		</div>
-	</div>
+  
+  <div class="black-background">
+    <div class="container od-more-projects">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-12 center-columns">
+          <h2 class="od-home-project-header">More Projects</h2>
+          <?php include(get_theme_root().'/understrap-child/include-projects.php');?>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<?php include(get_theme_root().'/understrap-child/include-projects.php');?>
 
 
 <?php get_footer(); ?>

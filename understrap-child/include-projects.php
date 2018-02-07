@@ -1,7 +1,7 @@
-<div class="container-fluid od-more-projects">
+<!-- <div class="container-fluid od-more-projects">
 	<div class="row">
-		<div class="col-sm-12 col-md-8 col-lg-10 center-columns">
-			<div class="card-deck od-card-deck">
+		<div class="col-sm-12 col-md-8 col-lg-10 center-columns"> -->
+			<div class="card-deck od-project-card-deck ">
 				<?php
 					$queryObject = new WP_Query( 'post_type=projects&posts_per_page=3' );
 				// The Loop!
@@ -27,7 +27,7 @@
 				    ?>
 			</div>
 		    <div>
-		    	<center><button class="od-view-all-button" href="#">View all projects</button></center>
+		    	<center class="od-view-all-button-parent"><button class="od-view-all-button" ><a href="/projects') ?>">View all projects</a></button></center>
 		    </div>
 		    <?php } ?>
 		</div>

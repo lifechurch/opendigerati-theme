@@ -202,12 +202,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #7C008C;
+  color: #000000;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #380040;
+    color: #000000;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -9630,7 +9630,7 @@ a.skip-link {
 /*homepage style*/
 
 .od-homepage-header {
-  margin-bottom: 48px;
+  margin-bottom: 200px;
 }
 @media only screen and (max-width: 992px) {
   .od-homepage-header {
@@ -9641,12 +9641,11 @@ a.skip-link {
 @media only screen and (min-width: 993px) {
   .od-homepage-header {
     margin-top: 140px;
+    margin-bottom: 250px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .od-homepage-header {
-    margin-bottom: 111px;
-  }
+  
 }
 
 
@@ -9749,9 +9748,12 @@ a.skip-link {
     font-size: 20px;
   }
 }
-
+.od-view-all-button-parent {
+  margin-top: -80px;
+  margin-bottom: 50px;
+}
 .od-view-all-button {
-  margin: 45px 0px 80px 0px;
+  margin: 0px 0px 0px 0px;
   width: 220px;
   height: 50px;
   border-radius: 30px;
@@ -9768,15 +9770,21 @@ a.skip-link {
     width: 268px;
     height: 60px;
   }
+  .od-view-all-button-parent {
+    margin-top: -95px;
+    margin-bottom: 50px;
+  }
 }
 
 .od-home-project-header {
   margin-bottom: 16px;
   font-size: 30px;
   font-family: proxima_novablack;
+  transform: translate(0, -112px);
 }
 @media (min-width: 992px) {
   .od-home-project-header {
+    transform: translate(0, -155px);
     font-size: 33px;
   }
 }
@@ -9788,7 +9796,7 @@ a.skip-link {
 }
 
 .od-card-deck {
-  margin-top:-60px;
+  
 }
 
 .od-project-card {
@@ -9799,13 +9807,17 @@ a.skip-link {
   height: 60px;
 }
 
+.od-project-card-deck {
+    transform: translate(0, -112px);
+}
+
 @media (min-width: 992px) {
   .od-more-projects {
     margin-top: 88px;
   }
 
-  .od-card-deck {
-    margin-top:-88px;
+  .od-project-card-deck {
+    transform: translate(0, -143px);
   }
   .od-project-card > span {
     height: 88px;
@@ -10007,6 +10019,20 @@ a.skip-link {
 .single-projects .od-project-slack img {
   margin-right: 11px;
 }
+.od-slack-project-invite {
+  position: absolute;
+  margin-top: -2px;
+  margin-left: 2em;
+  color: gray;
+}
+.od-footer-social {
+  width: 65px;
+  padding: 0px 15px 0px 15px;
+  opacity: .5;
+}
+.od-footer-social:hover {
+  opacity: 1;
+}
 @media (min-width: 992px) {
   .single-projects .od-project-slack {
     margin-top: 33px;
@@ -10016,6 +10042,10 @@ a.skip-link {
     margin-right: 15px;
     width: 50px;
     height: 50px;
+  }
+  .od-slack-project-invite {
+    margin-top: -10px;
+    margin-left: 3.5em;
   }
 }
 .tags > a {
@@ -10047,6 +10077,9 @@ a.skip-link {
 .single-projects .od-more-projects-header-container {
   padding-bottom: 20px;
 }
+.od-homepage .entry-content {
+  background: #000000;
+}
 /*.single-projects .od-more-projects-header-container {
   margin-left: -15px;
 }
@@ -10068,6 +10101,9 @@ a.skip-link {
   color: white;
   text-decoration: underline;
 }
+#full-width-page-wrapper {
+  margin-bottom: 200px;
+}
 @media (min-width: 992px) {
   #wrapper-footer {
     padding-top: 50px;
@@ -10075,3 +10111,58 @@ a.skip-link {
     font-size: 20px;
   }
 }
+.od-home-blog-posts {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.od-home-blog-header {
+  margin-bottom: 16px;
+  font-size: 30px;
+  font-family: proxima_novablack;
+}
+.od-blog-card {
+  padding: 20px;
+}
+.od-blog-card .card-body {
+  padding: 0px;
+}
+.od-blog-card .card-footer {
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.od-blog-card-0 {
+  border-style: solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, #e54c52, #cd7fdf);
+  border-image-slice: 1;
+}
+.od-blog-card-1 {
+  border-style: solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(to left, #15d9d8, #44fa67);
+  border-image-slice: 1;
+}
+.od-blog-card-2 {
+  border-style: solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(to left, #e2f052, #efbd56);
+  border-image-slice: 1;
+}
+.od-view-all-blog-button {
+  background-image: linear-gradient(to left, #e2f052, #efbd56);
+}
+@media (min-width: 992px) {
+  .od-home-blog-header {
+    font-size: 33px;
+  }
+}
+.black-background {
+  background: #000000;
+}
+.od-slack-workspace-invite {
+  text-decoration: underline;
+}
+.site-footer p {
+  margin-bottom: 2em;
+}
+
